@@ -30,7 +30,7 @@ const AddNewSongForm = ({ addNewSong }) => {
             <label htmlFor="genre">What is the Genre?🎙️</label>
             <input value={genre} onChange={(e) => setGenre(e.target.value)} name="genre" />
             <label htmlFor="release_date">What is the Release Date?📅</label>
-            <input value={release_date} onChange={(e) => setRelease_date(e.target.value)} name="release_date" />
+            <input type="date" value={release_date} onChange={(e) => setRelease_date(e.target.value)} name="release_date" />
             <button type="submit">Submit</button>
         </form>
      );
