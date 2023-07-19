@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import tambourine from './tambourine.svg';
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import axios from "axios"
@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={tambourine} className="App-logo" alt="logo" />
         <DisplaySongs songsList={songsList} />
       </header>
     </div>
