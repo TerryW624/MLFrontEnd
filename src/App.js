@@ -3,6 +3,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import axios from "axios"
 import DisplaySongs from './components/DisplaySongs/DisplaySongs';
+import AddNewSongForm from './components/AddNewSongForm/AddNewSongForm';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={tambourine} className="App-logo" alt="logo" />
+        <AddNewSongForm addNewSong={addNewSong} />
         <DisplaySongs songsList={songsList} />
       </header>
     </div>
