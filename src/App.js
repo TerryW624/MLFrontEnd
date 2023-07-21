@@ -4,10 +4,12 @@ import React, { useState, useEffect } from 'react';
 import axios from "axios"
 import DisplaySongs from './components/DisplaySongs/DisplaySongs';
 import AddNewSongForm from './components/AddNewSongForm/AddNewSongForm';
+import SearchSongsForm from './components/SearchSongsForm/SearchSongsForm';
 
 
 function App() {
   const [songsList, setSongsList] = useState([]);
+  const [inSongObjectInfo, setInSongObjectInfo] = useState("");
 
   useEffect(
     () => {getAllSongs();}, []
@@ -25,12 +27,15 @@ function App() {
     }
   }
 
+
+
   return (
     <div className="App">
       <header className="App-header">
+        <SearchSongsForm inSongObjectInfo={inSongObjectInfo} setInSongObjectInfo={setInSongObjectInfo} />
         <img src={tambourine} className="App-logo" alt="logo" />
         <AddNewSongForm addNewSong={addNewSong} />
-        <DisplaySongs songsList={songsList} />
+        <DisplaySongs songsList={songsList} inSongObjectInfo={inSongObjectInfo} />
       </header>
     </div>
   );
