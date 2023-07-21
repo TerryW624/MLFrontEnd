@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+
+.postSong {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(red, white, red);
+  align-items: center;
+  justify-content: space-around;
+  color: black;
+  padding: 20px;
+  width: 100%;
+}
+
+.searchBar {
+  display: flex;
+  flex-direction: row;
+  background-image: linear-gradient(red, white, red);
+  align-items: center;
+  justify-content: space-around;
+  color: black;
+  padding: 20px;
+  width: 100%;
+}
+
+.App-logo1 {
+  height: 10vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo1 {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}

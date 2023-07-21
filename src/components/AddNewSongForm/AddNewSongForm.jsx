@@ -20,7 +20,7 @@ const AddNewSongForm = ({ addNewSong }) => {
     };
 
     return ( 
-        <form onSubmit={handleNewSongSubmit}>
+        <form onSubmit={handleNewSongSubmit} className="postSong">
             <label htmlFor="title">What is the Title?😄</label>
             <input value={title} onChange={(e) => setTitle(e.target.value)} name="title" />
             <label htmlFor="artist">What is the Name of the Artist?🧑‍🎨</label>

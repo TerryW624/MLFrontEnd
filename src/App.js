@@ -34,8 +34,8 @@ function App() {
       <header className="App-header">
         <SearchSongsForm inSongObjectInfo={inSongObjectInfo} setInSongObjectInfo={setInSongObjectInfo} />
         <img src={tambourine} className="App-logo" alt="logo" />
-        <AddNewSongForm addNewSong={addNewSong} />
         <DisplaySongs songsList={songsList} inSongObjectInfo={inSongObjectInfo} />
+        <AddNewSongForm addNewSong={addNewSong} />
       </header>
     </div>
   );
