@@ -22,7 +22,14 @@ function App() {
 
   async function addNewSong(newSong) {
     let addedSong = await axios.post("http://127.0.0.1:5000/api/songs", newSong)
-    if (addedSong === 201) {
+    if (addedSong.status === 201) {
+      getAllSongs();
+    }
+  }
+
+  async function deleteSong(key) {
+    let deletedSong = await axios.delete(`http://127.0.0.1:5000/api/songs/${key}`)
+    if (deletedSong.status === 204) {
       getAllSongs();
     }
   }
@@ -34,7 +41,7 @@ function App() {
       <header className="App-header">
         <SearchSongsForm inSongObjectInfo={inSongObjectInfo} setInSongObjectInfo={setInSongObjectInfo} />
         <img src={tambourine} className="App-logo" alt="logo" />
-        <DisplaySongs songsList={songsList} inSongObjectInfo={inSongObjectInfo} />
+        <DisplaySongs songsList={songsList} inSongObjectInfo={inSongObjectInfo} deleteSong={deleteSong}/>
         <AddNewSongForm addNewSong={addNewSong} />
       </header>
     </div>

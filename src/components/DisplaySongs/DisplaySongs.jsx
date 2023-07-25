@@ -1,10 +1,9 @@
 import React from "react";
 
-const DisplaySongs = ({ songsList, inSongObjectInfo }) => {
+const DisplaySongs = ({ songsList, inSongObjectInfo, deleteSong }) => {
 
-    let testsongs = songsList.filter((song) => (song.title.includes(inSongObjectInfo)||song.album.includes(inSongObjectInfo)||song.genre.includes(inSongObjectInfo)||song.artist.includes(inSongObjectInfo)))
+    let testsongs = songsList.filter((song) => (song.title.toLowerCase().includes(inSongObjectInfo)||song.album.includes(inSongObjectInfo)||song.genre.includes(inSongObjectInfo)||song.artist.includes(inSongObjectInfo)))
     console.log(testsongs);
-
 
     return ( 
         <table>
@@ -15,6 +14,7 @@ const DisplaySongs = ({ songsList, inSongObjectInfo }) => {
                     <th>Album</th>
                     <th>Genre</th>
                     <th>Release Date</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
