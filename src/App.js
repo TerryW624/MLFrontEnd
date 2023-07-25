@@ -27,12 +27,7 @@ function App() {
     }
   }
 
-  async function deleteSong(key) {
-    let deletedSong = await axios.delete(`http://127.0.0.1:5000/api/songs/${key}`)
-    if (deletedSong.status === 204) {
-      getAllSongs();
-    }
-  }
+
 
 
 
@@ -41,7 +36,7 @@ function App() {
       <header className="App-header">
         <SearchSongsForm inSongObjectInfo={inSongObjectInfo} setInSongObjectInfo={setInSongObjectInfo} />
         <img src={tambourine} className="App-logo" alt="logo" />
-        <DisplaySongs songsList={songsList} inSongObjectInfo={inSongObjectInfo} deleteSong={deleteSong}/>
+        <DisplaySongs songsList={songsList} inSongObjectInfo={inSongObjectInfo} />
         <AddNewSongForm addNewSong={addNewSong} />
       </header>
     </div>

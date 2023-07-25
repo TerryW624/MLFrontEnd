@@ -1,6 +1,7 @@
 import React from "react";
+import DeleteSongComponent from "../DeleteSong/DeleteSong"
 
-const DisplaySongs = ({ songsList, inSongObjectInfo, deleteSong }) => {
+const DisplaySongs = ({ songsList, inSongObjectInfo }) => {
 
     let testsongs = songsList.filter((song) => (song.title.toLowerCase().includes(inSongObjectInfo)||song.album.includes(inSongObjectInfo)||song.genre.includes(inSongObjectInfo)||song.artist.includes(inSongObjectInfo)))
     console.log(testsongs);
@@ -25,6 +26,7 @@ const DisplaySongs = ({ songsList, inSongObjectInfo, deleteSong }) => {
                         <td>{song.album}</td>
                         <td>{song.genre}</td>
                         <td>{song.release_date}</td>
+                        <td><button><DeleteSongComponent id={song.id} /></button></td>
                     </tr>     
                 ))}
             </tbody>
